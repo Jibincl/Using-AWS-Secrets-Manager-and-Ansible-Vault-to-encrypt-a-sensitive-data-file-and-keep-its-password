@@ -30,9 +30,11 @@ main.yml
   tasks:
     - name: " installing packages"
       yum:
-        name: "{{ packages }}"
-        ..
-        ..
+        .
+        .
+        .
+        etc
+        
         
 ~~~
 
@@ -67,4 +69,34 @@ ansible-playbook -i hosts main.yml
 ERROR! Attempting to decrypt but no vault secrets found
 ~~~
 
-Now, we need to keep the password safe in AWS Secrete Manager.
+Now, we need to keep the password safe with AWS Secrete Manager. Lets check it out.
+
+### Step 1
+
+Go to AWS Secrets Manager and select "Store a new secrete"
+
+![image](https://user-images.githubusercontent.com/100774483/165912163-77d9f883-8e01-4ce4-8ab6-0c3649edb87f.png)
+
+
+### Step 2
+
+Fill as below
+
+Secret type: Other type of secret
+![image](https://user-images.githubusercontent.com/100774483/165913182-7b9222bf-0089-4990-aa0f-7d3da16e01ad.png)
+
+Key/value pairs : provide a name for the key and mention the password we used to encrypt the file
+
+![image](https://user-images.githubusercontent.com/100774483/165913459-5d849209-a560-4773-afda-07f37dd68720.png)
+
+
+Encryption key: AWS/secrets manager (default)
+![image](https://user-images.githubusercontent.com/100774483/165913516-22f09440-f0b9-4133-b1f9-60e099c868f2.png)
+
+
+Then click on "Next"
+
+
+
+
+
