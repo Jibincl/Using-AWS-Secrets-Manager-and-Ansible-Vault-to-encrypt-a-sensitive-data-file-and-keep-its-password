@@ -83,7 +83,8 @@ Go to AWS Secrets Manager and select "Store a new secrete"
 Fill as below
 
 Secret type: Other type of secret
-![image](https://user-images.githubusercontent.com/100774483/165913182-7b9222bf-0089-4990-aa0f-7d3da16e01ad.png)
+![image](https://user-images.githubusercontent.com/100774483/165914151-6322bf3f-d054-4963-8a7b-32b9d98800b5.png)
+
 
 Key/value pairs : provide a name for the key and mention the password we used to encrypt the file
 
