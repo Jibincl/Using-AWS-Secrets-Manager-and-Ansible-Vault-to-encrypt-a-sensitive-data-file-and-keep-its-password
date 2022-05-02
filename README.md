@@ -71,14 +71,14 @@ ERROR! Attempting to decrypt but no vault secrets found
 
 Now, we need to keep the password safe with AWS Secrete Manager. Lets check it out.
 
-### Step 1
+
 
 Go to AWS Secrets Manager and select "Store a new secrete"
 
 ![image](https://user-images.githubusercontent.com/100774483/165912163-77d9f883-8e01-4ce4-8ab6-0c3649edb87f.png)
 
 
-### Step 2
+
 
 Fill as below
 
