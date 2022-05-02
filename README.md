@@ -98,6 +98,11 @@ Encryption key: AWS/secrets manager (default)
 Then click on "Next"
 
 
+![image](https://user-images.githubusercontent.com/100774483/166187466-abc426f3-c331-48ad-97ad-94857ce0ec85.png)
+
+On next step, provide the secret name, description and key value. Next page is for setting automatic secret rotation and configurations associated with.
+On last page, review and cliek "store".
+
 
 
 
