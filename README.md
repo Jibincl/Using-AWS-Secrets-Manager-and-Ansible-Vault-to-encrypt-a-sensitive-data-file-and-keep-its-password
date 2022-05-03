@@ -113,6 +113,43 @@ We need to attach an IAM role which is having "SecretsManagerReadWrite" policy t
 . Actions
 . Security
 . Modify IAM role
-. Selected the role i have created.
+. Selected the role i have created
+. Click "save"
 ~~~
+
+So, currently the playbook cant be executed without the password. By using this methode, we are creating a script to grep the vault password from AWS secretsmanager and using the script name as an argument while running the plabook.
+
+~~~
+argument : --vault-password filename
+~~~
+
+### Script to get the password
+
+~~~
+#! /bin/bash
+password=$(aws secretsmanager get-secret-value --secret-id ansiblepassword --region us-east-2 | jq -r ".SecretString" | jq -r ".ansiblepassword")
+echo ${password}
+
+~~~
+
+#### FYI : ansible password of the name we given on AWS secrets manager while storing the vault password.
+
+## Installing json processor
+
+~~~
+sudo yum install jq -y
+~~~
+
+Now, the ansible file can be executed using the below sommand
+
+~~~
+ansible-playbook -i hosts --vault-password ans.sh
+~~~
+
+So the vault password required for executing the ansible playbook file will be fetched from the script "ans.sh".
+
+
+
+
+
 
