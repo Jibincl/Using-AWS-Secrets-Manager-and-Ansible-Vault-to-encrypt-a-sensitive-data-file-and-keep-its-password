@@ -152,7 +152,7 @@ So the vault password required for executing the ansible playbook file will be f
 
 ## Conclusion
 
-In this repo, we discussed about encrypting an ansible file with "ansible-vault" and keeping the vault password in AWS secretsmanager. 
+In this repo, we discussed about encrypting an ansible files having sensitive informations with "ansible-vault" and keeping the vault password in AWS secretsmanager. 
 Feel free contact if you have any concerns about the subject.
 
 
