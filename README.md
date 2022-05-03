@@ -101,8 +101,18 @@ Then click on "Next"
 ![image](https://user-images.githubusercontent.com/100774483/166187466-abc426f3-c331-48ad-97ad-94857ce0ec85.png)
 
 On next step, provide the secret name, description and key value. Next page is for setting automatic secret rotation and configurations associated with.
-On last page, review and cliek "store".
+On last page, review and click "store".
 
 
+Now, the ansible vault password is succesfully stored in AWS secret manager.
 
+We need to attach an IAM role which is having "SecretsManagerReadWrite" policy to the instance for using secretsmanager. So i  manually created an IAM role with the respective policy and attached to the imstance by following the below mentioned steps
+
+~~~
+. EC2 instance
+. Actions
+. Security
+. Modify IAM role
+. Selected the role i have created.
+~~~
 
